@@ -1,9 +1,72 @@
 @import 'styles/variables.scss';
 
+$avatar-width: 150px;
+
 .app {
   margin: 80px auto $base-margin auto;
   padding: 0 2 * $base-padding 2 * $base-padding 2 * $base-padding;
 
   width: 960px;
   background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: $avatar-width;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px - $avatar-width * 0.5;
+}
+
+.introduction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 50px;
+  margin-top: $base-margin + $avatar-width * 0.5;
+  padding-bottom: $base-padding;
+  border-bottom: 3px solid $gray;
+}
+
+.about-me {
+  margin: $base-margin;
+}
+
+.about-me h1, .educations h1 {
+  color: $primary-color;
+  padding-bottom: $base-padding;
+}
+
+.educations {
+  width: 100%;
+  padding-left: 40px;
+}
+
+.education_item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.education_year {
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+.education_description {
+  padding: $base-padding;
+  line-height: 30px;
+  width: 100%;
+  margin-right: 40px;
+  background-color: $gray;
+}
+
+.education_description_title {
+  font-size: 15px;
 }
